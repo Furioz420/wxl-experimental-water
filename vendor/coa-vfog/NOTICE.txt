@@ -1,0 +1,65 @@
+CoAVolFog integration in WarcraftXL, updated 2026-10-01
+
+Upstream: https://github.com/jealous-sound/coa-vfog
+Revision: 4e31ddf53a326ba9c0ad03488b4c30f7ce23c969
+Source license: GPL-3.0-only. LICENSE and the original README.md are retained.
+The README contains upstream's GPLv3 section 7 additional permission concerning
+combination with the World of Warcraft client; retain it with redistribution.
+UPSTREAM.json records original file hashes and which files were adapted.
+
+Local changes:
+- fog_data.cpp/.h: bounded in-memory loading from a Windows DLL resource.
+- renderer.cpp: allow the readable depth texture to supply its description when
+  WXL has temporarily unbound its depth surface for an ordered render pass.
+- WXL's VFogPass adapter, CMake rules and tests live outside this vendor tree.
+
+The imported subset contains fog ray marching, temporal filtering, compositing,
+noise, optional shafts, configuration helpers, fog/water data readers and the
+Forever FFT/stencil water renderer and shaders, authored noise, unit-contact
+capture, ripple simulation, local-light capture, and supporting depth/fog-fit code.
+Upstream's loader, D3D wrapper, detours and overlay are not installed or built.
+WXL retains device, hook, frame ordering and reset ownership.
+
+Data provenance (not a claim of new ownership of Blizzard-derived data):
+- fogdata.bin is upstream's converted Classic light, time-key and zone-outline
+  dataset. The retained convert_classic_fog.py describes its source format.
+- waterdata.bin is upstream's converted WoW Forever liquid presets, FFT tile
+  parameters and foam masks. The retained convert_forever_water.py validates
+  the original kit manifest when regenerating the data.
+The updated fog kit is WoW Forever build 1.60.1.70009, format 4, including authored
+noise, glow and grading curves. Both binary datasets are copied byte-for-byte from
+the pinned revision. The
+source license does not by itself establish independent rights in third-party
+game assets. This local test package retains upstream's data and provenance.
+
+Current integration limits:
+Native distance fog is temporarily suppressed during eligible world frames after
+a successful early fog frame, and the upstream replacement distance layer is
+enabled. Original ranges feed fog/water inputs and are restored at world exit.
+Warm-up, disabled, underwater and unsupported contexts retain native fog.
+Local point lights are read through the upstream guarded native capture and fed
+to fog; WXL's interior classification and continuous blend overwrite its interior
+classification. Capture rejection supplies no lights rather than stale data.
+Interior classification uses WXL's existing WMO classifier; enclosed fog receives
+the native continuous interior blend through a guarded WXL adapter. The approved
+pre-screen-effects candidate supplies native glow compensation only at that early
+boundary; the late fallback keeps it zero. Forever water uses WXL-owned pre/post-liquid depth copies
+and existing material/DIP hooks, rather than the upstream wrapper. Enclosed
+water uses the interior preset to suppress outdoor sunlight. The surface stays
+flat, as upstream; legacy displaced-wave volume effects yield on those frames.
+Unit contacts use the upstream bounded, guarded reader and WXL's existing liquid
+callback. The native splash sprites remain enabled, avoiding upstream's global
+sprite suppression outside the simulated region. New controls use the independent
+wxl-vfog-effects.ini; previous fog/water preference schemas remain unchanged.
+The upstream MSAA wrapper, transparent-batch hooks, Forever glow and grading
+integration are not enabled by this update. Compiled support code is not a claim
+that these features are integrated. Existing WXL device/reset ownership remains.
+Prior fog/water received user gameplay acceptance through WXL source e37682b.
+This updated renderer, noise, ripples and fog lighting require fresh live acceptance.
+No full upstream parity or universal map/material/driver coverage is claimed.
+
+October 1 follow-up: WXL now consumes authored grading curves through its existing
+retail-grading owner. NativeForeverGlow.hpp and ForeverGlowPolicy.hpp adapt the
+pinned engine.cpp guard bytes and forever_look.cpp blend/restore behaviour under
+this repository's GPL terms. No upstream hook or device wrapper is installed.
+These WXL adapters are outside this unchanged-upstream-file hash manifest.

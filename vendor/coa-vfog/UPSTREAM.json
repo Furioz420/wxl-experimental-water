@@ -1,0 +1,386 @@
+{
+  "repository": "https://github.com/jealous-sound/coa-vfog",
+  "commit": "4e31ddf53a326ba9c0ad03488b4c30f7ce23c969",
+  "files": [
+    {
+      "path": "LICENSE",
+      "upstream_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "locally_modified": false
+    },
+    {
+      "path": "README.md",
+      "upstream_sha256": "176563493e49281c730d537d65225c1e06ab4bdf200f93018f900e617484e7cc",
+      "locally_modified": false
+    },
+    {
+      "path": "data/fogdata.bin",
+      "upstream_sha256": "4276f4b8511ae78c854faebaea7931ff9c57439179623ad7ffd64284e78d160a",
+      "locally_modified": false
+    },
+    {
+      "path": "data/waterdata.bin",
+      "upstream_sha256": "6e09ad128d0d73c94231e76b4491a8bbac1a27fad9c1aaa54c846f04ad72d99c",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_authored_noise.hlsli",
+      "upstream_sha256": "66e32b43011bfaff5a7f8490c7dcf011cb22f33dd98475de35d800b7e2e6c5eb",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_common.hlsli",
+      "upstream_sha256": "9bb819f4b840881d759c8c97e289b8ac6bf459942dc88bd6b9e78a9be5c4f71b",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_composite.hlsl",
+      "upstream_sha256": "7e93e6a76e58e0d8739e8fe614a25af90a385c67b1a6bd2273b3b26dfb03257c",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_composite.hlsli",
+      "upstream_sha256": "c63844a3f1d236683c5541f4d1d542317a80226e81d79a1790b1181f32d0ab57",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_composite_split.hlsl",
+      "upstream_sha256": "b76b621add9b83e17fa84610b6a7076e7904b8d11b9396695948d05985495087",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_density_probe.hlsl",
+      "upstream_sha256": "3bc21e0e3c061c431ddd91b99a942c36f78ba5f81f151c3355e6a5950f678794",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_density_variation.hlsli",
+      "upstream_sha256": "b57cc2d554b739af8356a073ddc9cfe62d137b15e99a33428ea9ff77f8873aed",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_depth_check.hlsl",
+      "upstream_sha256": "28aa3bfbec3345b171eeb1388921e06bbc1103723520d42006df6edaebd04614",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_fullscreen_vs.hlsl",
+      "upstream_sha256": "5dfa74ba2216f2c451a3c17e43c9c6199d80a0a4e9cb60b4b415d6ce8f4ad16f",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_history_depth.hlsl",
+      "upstream_sha256": "3c19553fc7f22c9aed3f72ee27dfb86b1d77f92ee70292083e4c0bff124182a9",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_integrate.hlsli",
+      "upstream_sha256": "9f650e1f61e55c5c9a5cd89303bd579b6421a3060fbec6217f6aab2bdc4f3218",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_local_lights.hlsli",
+      "upstream_sha256": "dae48b6175fa4d37510ad0d777b3e1767b89fa2b7f0a7a5ef0f35be1ca5647e9",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_march.hlsl",
+      "upstream_sha256": "0870874736861def5532c535d1e8efd777e3ae55e28201e336f489abf4ad2d00",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_probe.hlsl",
+      "upstream_sha256": "c6318c3d9458afd97ed4644989cafb757df7e57e5507db003a41f264cf5e16b3",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_ray_blur.hlsl",
+      "upstream_sha256": "64acb157de13fa4fb816d5e5041ec56a4bf357a0e83beb6bdab3fb0a7216a18d",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_ray_composite.hlsl",
+      "upstream_sha256": "4e736509729cd1b2b317ce01f50c5288cdc17e0f5c2bf6ed359ea333d26718b4",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_ray_mask.hlsl",
+      "upstream_sha256": "3aef734b46f9bc98ae640aff3326af6ba1469111b82608f359a2d43ddad0bd56",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_sample_split.hlsli",
+      "upstream_sha256": "fa157fa549a4677a20b52c4ea77caabc475e4c26802313db9ef13107792d3ae9",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_silhouette_mask.hlsl",
+      "upstream_sha256": "3ab1e6005f1e3f48e59f460c53616761c806a030bf8fbafb64f85a2cda50ccf7",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vf_temporal.hlsl",
+      "upstream_sha256": "d23010218a9767f99f8f2be61cfd0da545a08b5d75cae476acf156ca97f595c2",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vp_grade.hlsl",
+      "upstream_sha256": "968d5dace634645a4be4b1800c802a4007bcb1cbc46d8efa460265df37d50948",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_constants.hlsli",
+      "upstream_sha256": "2cddd23e6e575896d3b43a9e59258f228963a2ed936708402b6081da0ba76c7c",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_fft_butterfly.hlsl",
+      "upstream_sha256": "c653d5ba490c71c427b58eb3f0d4182137b5134c59d28d96f441edbbb09503b9",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_fft_common.hlsli",
+      "upstream_sha256": "314dad36fd27a4ffc275707b663729b2ed348e6283a5f0fd1ceefafdece6d1c7",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_fft_evolve.hlsl",
+      "upstream_sha256": "82be2e7f17e6d96b83566204e91245eff07d45ddb1a39d83edcf5488cb74ae55",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_fft_mip.hlsl",
+      "upstream_sha256": "4632848a8cdc762058405cc4b91c3281edb2165385288a1031cfe4608925c2f1",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_fft_surface.hlsl",
+      "upstream_sha256": "ad495ca3138973b48c4bc4bc548372248305c79d8ec5b1e5bc374309c4c7e7bc",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_linear_depth.hlsl",
+      "upstream_sha256": "782ee668c06fc4c75b10c9c700a3d2194d8748b008efa70e3a9beb7740ca10c1",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_optics.hlsli",
+      "upstream_sha256": "0d982309343aaaf0335f4b1856380ed75585c5985e30465d39d598ad275f0624",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_reflection.hlsli",
+      "upstream_sha256": "f48f39b641e79f7d2e5f2392e450b48f765618759494ddb0f18bbe0ce6eabc2f",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_ripple_step.hlsl",
+      "upstream_sha256": "d816323bb2df462b4932b870338fe2370874bfa5bff708c8f30b575c0dca14bc",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_surface.hlsli",
+      "upstream_sha256": "f6bc4167094bfcd429835da14c9a6f328e97e541874f83ac00646e68c81f3528",
+      "locally_modified": false
+    },
+    {
+      "path": "shaders/vw_water.hlsl",
+      "upstream_sha256": "fb80e448e88033b7e10d23e2112fd1066a2954cbb8542aa57ec28f6bc66cfc33",
+      "locally_modified": false
+    },
+    {
+      "path": "src/config.cpp",
+      "upstream_sha256": "e9c5ac115dd95eee97e6dd62b387a3d863e66b1b60e2bcc3ab518dbe2f4844c8",
+      "locally_modified": false
+    },
+    {
+      "path": "src/config.h",
+      "upstream_sha256": "39d300d12dae21758734c3d0514704b51b350a7a8fa9610d36d445b203a0af9c",
+      "locally_modified": false
+    },
+    {
+      "path": "src/engine.h",
+      "upstream_sha256": "ec4f83b5a5ae0fb65ccdd7d34f8e0ea31ef36c28ddf7b7330e274e14686d3f10",
+      "locally_modified": false
+    },
+    {
+      "path": "src/engine_actors.cpp",
+      "upstream_sha256": "1f70dd473cd5a5d92e4df652c55ea1f45b7cf2f8ca1b24300d922559a8f7c56a",
+      "locally_modified": false
+    },
+    {
+      "path": "src/engine_actors.h",
+      "upstream_sha256": "62a016ccca0d766d8850ed5adf9b525391384b839719f188ccbe84a079c281fe",
+      "locally_modified": false
+    },
+    {
+      "path": "src/engine_lights.cpp",
+      "upstream_sha256": "1a0c6a8bfbe3130423f8042451145ed5650785cd9bdb8265dc525f2f8711e096",
+      "locally_modified": false
+    },
+    {
+      "path": "src/engine_lights.h",
+      "upstream_sha256": "f80d2ebbef99b662c4b56a97475b39269443819bc5dd20a2e7ede3e3b6fdfc22",
+      "locally_modified": false
+    },
+    {
+      "path": "src/fog_data.cpp",
+      "upstream_sha256": "5f2cc0c369f5fa36acb0fb98f0e1b453258d728c78c16b2e7d289c758a361202",
+      "locally_modified": true
+    },
+    {
+      "path": "src/fog_data.h",
+      "upstream_sha256": "43a33437924cd6c41857085187de0b4b96f06833f4f34e2e9f20d32a38fc3634",
+      "locally_modified": true
+    },
+    {
+      "path": "src/fog_model.cpp",
+      "upstream_sha256": "14d96183bd3ed4bb76741a25d0329d8dff99807f28ae9d62b7e10d82958f223e",
+      "locally_modified": false
+    },
+    {
+      "path": "src/fog_model.h",
+      "upstream_sha256": "7236db40386f899af62fc181500f256c9500791d73ac4afbd86ee97a3b187cd7",
+      "locally_modified": false
+    },
+    {
+      "path": "src/fullscreen_triangle.h",
+      "upstream_sha256": "d256354028adc23b4c13b6667cf6faff596e7bf62c91ef2b75a5fc96deb7a64f",
+      "locally_modified": false
+    },
+    {
+      "path": "src/gpu_timing.cpp",
+      "upstream_sha256": "971d69e2caa5b4795f4718f08d3628175bd0051ce6a5803e680d86b73c093104",
+      "locally_modified": false
+    },
+    {
+      "path": "src/gpu_timing.h",
+      "upstream_sha256": "791349cfbb1cc0754925e7b8dd891855b23e76130096b7ae7e4d6d26dfa3859b",
+      "locally_modified": false
+    },
+    {
+      "path": "src/log.h",
+      "upstream_sha256": "34ee94741b7ffcb9d28fdf50e7ffb74e55482cb2c6de2b6620246f64f0b05847",
+      "locally_modified": false
+    },
+    {
+      "path": "src/msaa_depth.cpp",
+      "upstream_sha256": "a26312090e1501321004f616815ccb1d5d5b1c4bffc6f5535545197e1e9fdd2a",
+      "locally_modified": true
+    },
+    {
+      "path": "src/msaa_depth.h",
+      "upstream_sha256": "edf448b00a661640d68caa3575b0f4d129f9a6e08a112c88b3e19dc14856dc6f",
+      "locally_modified": false
+    },
+    {
+      "path": "src/noise_volume.cpp",
+      "upstream_sha256": "929018f0c1049f2075aa1df5bcee02f567563d251509fc0641d1b273e249919b",
+      "locally_modified": false
+    },
+    {
+      "path": "src/noise_volume.h",
+      "upstream_sha256": "ad56116d397cf683beb63809f4bdb2af4636163b62676e6fa5f44b447ed05bcc",
+      "locally_modified": false
+    },
+    {
+      "path": "src/renderer.cpp",
+      "upstream_sha256": "c50f0193507bbc7e23e482881f0a62aea44309656cf7c05a68151e8e88d08938",
+      "locally_modified": true
+    },
+    {
+      "path": "src/renderer.h",
+      "upstream_sha256": "c1d335bba05880544a9892d56de8c2fb1ba4f179801207c71c70f5045207393f",
+      "locally_modified": false
+    },
+    {
+      "path": "src/transparent_fog.cpp",
+      "upstream_sha256": "91817c536a8511b5044876500e241818a9d115b832964668c474615bb964ea5e",
+      "locally_modified": false
+    },
+    {
+      "path": "src/transparent_fog.h",
+      "upstream_sha256": "c776875841b86b2fc8333a79a57b79b1dd01d11459da7dfc21385e603dc40d61",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_classify.h",
+      "upstream_sha256": "7ae5f3ec0723ba7811540b50f9b5f703e0e4507d9d178f0b75596b38cc9275d6",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_contacts.cpp",
+      "upstream_sha256": "78eb80dac9487213e27c9800f14044f3eeae2edb775551d8953e25660057a473",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_contacts.h",
+      "upstream_sha256": "145ad24f1436236b91b4d4f2fe64bfdbe599c22ec2ead559888f5be468328e73",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_data.cpp",
+      "upstream_sha256": "2d9387d3ced3395eb11eefb6d086d1d397a293fa6fb7f404a844b6ab3638eb2e",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_data.h",
+      "upstream_sha256": "ae09a2e789c5cfc7dc578571e8c4b94a326f3d346afc4a54b004414ef366e1b3",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_fft.cpp",
+      "upstream_sha256": "f4a48ae797a5e7283506aeb0085a97207f3ad5853de4196297879539662aa804",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_fft.h",
+      "upstream_sha256": "1783d3dff4b91ecceb9d6f3c6178dca77042e5b470cceeea521c29884c33eb96",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_renderer.cpp",
+      "upstream_sha256": "73195df9bc2e8407f8f60492ac50788e97ddfda0cb172ec58b24faf2e5b57193",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_renderer.h",
+      "upstream_sha256": "6e5c941aa2d2af240ab1347e5bfe8d20c5bb0a35bce4d2f24f4943dea08d8876",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_ripples.cpp",
+      "upstream_sha256": "b7885717c138231c5237e545b05b6e20764a4dab751855e8022141adac0c03d3",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_ripples.h",
+      "upstream_sha256": "da8b230f9d78a4d4986272c209fbbe8502cdf4bf4abe6958d38ecde446db6d7f",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_spectrum.cpp",
+      "upstream_sha256": "4af27f1f55c1ef3725751f891903ab9e8bc67795f1dcfe7a086e60479e93e980",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_spectrum.h",
+      "upstream_sha256": "58cea1624b1215d17be8812986a61ee56f3e4696a05c7d473f27132f2be3994e",
+      "locally_modified": false
+    },
+    {
+      "path": "src/water_types.h",
+      "upstream_sha256": "0c9bbb15a7e3792d15285486442149db831679a78e9b1163f34ef9ab78a2c07f",
+      "locally_modified": false
+    },
+    {
+      "path": "tools/convert_classic_fog.py",
+      "upstream_sha256": "85ef613c64bddda4df9f3691cb085fd8cb373ea2e62516b5ab10a81021696fce",
+      "locally_modified": false
+    },
+    {
+      "path": "tools/convert_forever_water.py",
+      "upstream_sha256": "771ef4ad06fd63bf58e83ead1f797dfa4e700bfb402584b917eb24a3443dd1e3",
+      "locally_modified": false
+    }
+  ]
+}
