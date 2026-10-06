@@ -1,6 +1,10 @@
 # Experimental Water
 
-This repository is reserved for the WXL module `wxl-experimental-water`. The module currently lives in the WXL v1.1 integration checkout; this documentation PR contains **no source or release DLL**. Active water and shared-renderer edits are still being reconciled, so an older file copy would give reviewers a misleading implementation.
+This repository is reserved for the WXL module `wxl-experimental-water`. The module currently lives in the local WXL integration checkout; this `main` branch contains **no source or release DLL**. Active water and shared-renderer edits are still being reconciled, so an older file copy would give reviewers a misleading implementation.
+
+## Source publication status (2026-10-06)
+
+The attempted [source refresh](https://github.com/Furioz420/wxl-experimental-water/pull/2) is closed. Its mesh code did not build against the aligned Furioz420/wxl-core `853217d7b0441e95eed2ba092f291dbd6626e6c9`: it references liquid hook types and offsets absent from that core, including `ChunkGeomPurgeFn`, `MapChunkBufFreeFn`, and `LiquidGetAaBoxFn`. Do not fill those offsets with guessed addresses. The exact refresh tip `9cbdc5cdf257032f99d1e182e2a41769208b5e24` and other removed branch tips are preserved in the verified local `wxl-experimental-water.bundle` archive. Publish source after the missing hook contract is established and a Release/Win32 build passes.
 
 ## Integration and release checks
 
