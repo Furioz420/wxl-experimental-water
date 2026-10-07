@@ -10,6 +10,8 @@ The selected local candidate is already installed in C:\Eunoia Wxl Mpq; the thre
 
 The verified rollback is at C:\Eunoia Wxl Mpq\_wxl_publish_rollback\water-v1296-20261007. Its manifest records hashes for the three DLLs, tuner strings, and four water/fog settings files. The 2026-10-07 startup log reports the water extension loaded and its 456 tuner strings available; visual acceptance remains pending.
 
+An isolated Release/Win32 build of the integrated source completed on 2026-10-07 with zero errors. Its water DLL has SHA-256 0337A302C07ECF5868BBD840CA351395E878ACE82832C01788FA2AA0913DB8F5 and differs from the installed candidate in 15 bytes at the same file size. The build produced 66 shader compiler warnings. The built DLL was not installed; the client test uses the matched packaged trio above.
+
 Launch the client from this folder, confirm the water module loads, then inspect a shoreline, shallow and deep water, reflections/refraction, foam, and the in-game tuner. Travel between a water-heavy zone and a city, change a water setting and restore it, and exercise a graphics/device reset if available. Watch for black terrain or clothing, state leakage after water draws, lost shadows, a crash, or unexpectedly reduced image quality. Record the client log and screenshots for any failure.
 
 For rollback, close WoW and restore the verified backup of the whole core/proxy/water trio and the two settings files together. Do not replace a single DLL from a different runtime family.

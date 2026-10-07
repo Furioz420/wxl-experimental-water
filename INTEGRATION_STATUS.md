@@ -31,3 +31,8 @@ C:\Eunoia Wxl Mpq with the hashes recorded in [TESTING.md](TESTING.md).
 Its 2026-10-07 startup log reports the water extension loaded and the
 rollback copy is hash-verified. This is a package/startup check, not visual
 acceptance of the newly built DLL or the public repository source.
+
+The independent 2026-10-07 Win32 build of the integrated source passed with
+zero errors; its water DLL differed from the selected client DLL in 15 bytes
+at the same size. See [TESTING.md](TESTING.md) for the exact hash and visual
+test plan.
