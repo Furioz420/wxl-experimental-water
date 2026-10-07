@@ -1,7 +1,33 @@
-# Integration source status - 2026-10-07
+# Integration source and build status - 2026-10-06
 
-The 176 implementation files in this repository match E:\WXL1.1\extensions\wxl-experimental-water byte-for-byte after CRLF/LF normalization. The source snapshot originated from local WXL integration commit 50c2f0d82a02216b6e1542eb33b49b617ea41d0b; the current integration checkout contains other unrelated uncommitted work, which was not copied here.
+This repository contains the `wxl-experimental-water` extension maintained under Furioz420.
+This repository provides source, not an installable client release.
 
-The selected local client runtime labeled v1.2.296 has matching core/proxy/water hashes in the DevAPI RC1 package and C:\Eunoia Wxl Mpq. This establishes package alignment, not a fresh build of this repository against the public core or live gameplay acceptance. The public water repository previously contained documentation only; this main-branch source update closes that source gap.
+## Provenance
 
-Build requirements and the test/rollback gate are in [README.md](README.md) and [TESTING.md](TESTING.md). Do not publish the vendored game-derived datasets without a separate redistribution review.
+Source: `50c2f0d82a02216b6e1542eb33b49b617ea41d0b` from the local WXL integration workspace. Existing repository
+licenses, attribution, packaging, and independently maintained files are retained.
+No game client, database dump, or server credentials are included.
+
+## Build and installation requirements
+
+Build this extension inside a compatible WXL core with the matching extension APIs.
+Standalone CI, release packaging, and client acceptance remain separate gates.
+Validate the matching client installation before publishing a binary release.
+
+## Aligned source build - 2026-10-06
+
+`shared.cmake` selects the stock-topology `LatticeCompat.cpp` adapter used by the
+existing client and excludes `mesh/Lattice.cpp`, `mesh/Owned.cpp`, and
+`world/Ride.cpp`. Those donor units require liquid lifecycle hooks that have not
+been verified in the v1.2.296-aligned core. The Release/Win32
+`wxl-experimental-water` target built successfully against
+Furioz420/wxl-core `853217d7b0441e95eed2ba092f291dbd6626e6c9` with
+Visual Studio 2026. The built DLL has the same size as the working client DLL
+and differs in 15 bytes; client gameplay acceptance is still pending.
+
+The selected local v1.2.296 core/proxy/water trio is already installed in
+C:\Eunoia Wxl Mpq with the hashes recorded in [TESTING.md](TESTING.md).
+Its 2026-10-07 startup log reports the water extension loaded and the
+rollback copy is hash-verified. This is a package/startup check, not visual
+acceptance of the newly built DLL or the public repository source.
