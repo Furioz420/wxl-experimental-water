@@ -1,13 +1,15 @@
-# Experimental Water
+# Experimental Water for WarcraftXL
 
-This repository is reserved for the WXL module `wxl-experimental-water`. The module currently lives in the WXL v1.1 integration checkout; this documentation PR contains **no source or release DLL**. Active water and shared-renderer edits are still being reconciled, so an older file copy would give reviewers a misleading implementation.
+This repository contains the integrated wxl-experimental-water extension source. It supplies water surface, refraction, foam, shoreline, weather and fog rendering, plus the in-game tuning panel and localized tuner strings. The extension uses WarcraftXL's render and device lifecycle; it is built as a Win32 DLL inside a compatible wxl-core checkout.
 
-## Integration and release checks
+## Build and deploy
 
-The water module covers surface rendering, refraction, volume effects, ride interaction, and tuner text. It depends on matching core D3D9/render/event APIs, the environment support code and shared ImGui integration. The integrated target also deploys `wxl-water-lang.json` when `CLIENT_PATH` is set. Keep the DLL, tuner strings, and any client data as explicitly reviewed package components; do not publish a local patch archive by wildcard.
+Place this repository at extensions/wxl-experimental-water in the matching core source tree. Configure the core for Win32, then build the wxl-experimental-water target in Release. The core's extension discovery reads shared.cmake, target.cmake, and vfog.cmake. The matching core excludes the donor-only Lattice.cpp, Owned.cpp, and Ride.cpp translation units from this target while retaining their source for provenance. Do not enable those files without the lifecycle hooks they require.
 
-After the shared renderer API and water changes are committed, copy a pinned source snapshot into a separate review update, build Win32 against that exact core, and test world transitions, water visibility and refraction, device reset, tuner controls, performance, and rollback. Preserve HD quality during optimization. Until those checks pass, this README does not represent a working standalone package.
+Deploy wxl-experimental-water.dll to extensions/wxl-experimental-water/ and src/wxl-experimental-water/lang/wxl-water-lang.json to the client as wxl-water-lang.json. Keep its WarcraftXL core and D3D9 proxy from the same tested runtime set; mixing release families has not been validated. The client also reads wxl-forever-water.ini and wxl-vfog-effects.ini for saved settings.
 
-## Credits and license
+The selected local v1.2.296 client candidate and its exact hashes, test steps, and rollback are recorded in [TESTING.md](TESTING.md). A source commit or successful build alone does not establish in-game acceptance.
 
-Preserve WarcraftXL source notices and the GPL-3.0 license when source is added. Furioz's local integration changes remain attributed in the integration Git history. Client textures and other external assets are not included.
+## Credits and data
+
+WarcraftXL contributors and Furioz developed the local integration. The vendored CoAVolFog subset comes from [jealous-sound/coa-vfog](https://github.com/jealous-sound/coa-vfog), revision 4e31ddf53a326ba9c0ad03488b4c30f7ce23c969; its original license, README, notices, and file-level provenance are retained under vendor/coa-vfog/. The repository uses GPL-3.0 and retains upstream's additional permission text. fogdata.bin and waterdata.bin are derived from game data; review redistribution rights separately before creating a public binary or source release containing them.
